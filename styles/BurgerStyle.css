@@ -1,0 +1,129 @@
+header {
+    font-family: Georgia, serif;
+    display: flex;
+    align-items: center;
+    border: 1px solid red;
+    background-color: white;
+  }
+  #nav_menu ul {
+    list-style: none;
+    position: relative;
+  }
+  #nav_menu ul li {
+    float: left;
+    width: 50%;
+  }
+  #nav_menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+  }
+  #nav_menu ul ul li {
+    float: none;
+  }
+  #nav_menu ul li:hover > ul {
+    display: block;
+  }
+  #nav_menu > ul::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  #nav_menu ul {
+    margin: 0;
+    padding: 0;
+  }
+  #nav_menu ul li a {
+    opacity: 1;
+    text-align: center;
+    display: block;
+    padding: 1em 0;
+    text-decoration: none;
+    background-color: #f05c26;
+    color: white;
+    font-weight: bold;
+  }
+  #nav_menu ul li.lastitem a {
+    width: 178px;
+  }
+  #nav_menu ul li a.current {
+    color: yellow;
+  }
+  #nav_menu ul li a:hover,
+  #nav_menu ul li a:focus {
+    background-color: #eaedf2;
+    color: #0033a0;
+  }
+  
+  h1 {
+    color: crimson;
+  }
+  
+  h2 {
+    text-align: center;
+    color: crimson;
+    border: inset black;
+    border-radius: 20px;
+    height: 40px;
+  }
+
+
+
+
+table 
+{
+    border: 1px solid ;
+    border-collapse: collapse;
+}
+
+body
+{
+    width: 90%;
+    margin: auto;
+    background-color: palegreen;
+}
+
+h3
+{
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+table
+{
+    font-size: 1.5em;
+    margin: auto;
+    text-align: center;
+}
+
+th 
+{
+    text-align: center;
+    background-color: rgb(27, 27, 104);
+    color: white;
+    padding: 20px;
+}
+
+th > p
+{
+    text-align: left;
+}
+
+td
+{
+    text-align: left;
+    padding: 20px;
+}
+
+tbody tr:nth-child(odd) 
+{
+    background-color: white;
+}
+
+tbody tr:nth-child(even) 
+{
+    background-color: palegoldenrod;
+}
+

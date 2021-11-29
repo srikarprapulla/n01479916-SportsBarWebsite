@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut Icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>The Sporting Globe</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <img
+          src="assets/Sports Bar Logo.png"
+          alt="SportsBar Logo"
+          height="150px"
+          width="250px"
+        />
+        <div>
+          <h1>The Sporting Globe</h1>
+          <h3>Drink Play Repeat!</h3>
+        </div>
+      </header>
+      <nav id="nav_menu">
+        <ul>
+          <li>
+            <a href="#">Sports</a>
+            <ul>
+              <li><a href="cricket.html">Cricket</a></li>
+              <li><a href="football.html">Football</a></li>
+              <li><a href="bowling.html">Bowling</a></li>
+              <li><a href="gokart.html">Go Carting</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Refreshments</a>
+            <ul>
+              <li><a href="#">BBQ</a></li>
+              <li><a href="#">Burgers</a></li>
+              <li><a href="pizzas.html">Pizzas</a></li>
+              <li><a href="#">Drinks</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <main>
+        <div class="main-div">
+          <section class="text-section">
+            <h1>A place to have UNSTOPPABLE fun.</h1>
+            <ul>
+              <li>
+                <a href="#">Sports</a>
+                <ul>
+                  <li><a href="cricket.html">Cricket</a></li>
+                  <li><a href="football.html">Football</a></li>
+                  <li><a href="bowling.html">Bowling</a></li>
+                  <li><a href="gokart.html">Go Carting</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Refreshments</a>
+                <ul>
+                  <li><a href="#">BBQ</a></li>
+                  <li><a href="#">Burgers</a></li>
+                  <li><a href="pizzas.html">Pizzas</a></li>
+                  <li><a href="#">Drinks</a></li>
+                </ul>
+              </li>
+            </ul>
+            <button id="modal-btn">Book a slot to play !</button>
+            <div class="modal">
+              <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h1 class="header">Book a slot :</h1>
+                <p class="subHeader">Select a sport to play :</p>
+                <form>
+                  Sports:
+                  <select id="sportsDropDown"></select
+                  ><br />
+                  <input
+                    class="selectSportButton"
+                    type="button"
+                    value="Select Sport"
+                    onclick="selectSport()"
+                  />
+                </form>
+                <form>
+                  Slots:
+                  <select id="timeSlotsDropDown"></select
+                  ><br />
+                  <input
+                    class="selectSlotsButton"
+                    type="button"
+                    value="Select Slot"
+                    onclick="selectTimeSlot()"
+                  />
+                </form>
+                <div class="submitModalButtonDiv">
+                  <input
+                    class="submitModalButton"
+                    type="submit"
+                    value="Submit"
+                    onclick="submitModal()"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="image-section">
+            <img
+              class="home-image"
+              src="assets/Sports-Bar-Smaller.jpg"
+              alt="Happiness Image"
+              width="600px"
+            />
+          </section>
+        </div>
+      </main>
+      <footer>@2021 The Sporting Globe. Come Relax Enjoy!</footer>
+    </div>
+    <script src="js/home.js"></script>
+  </body>
+</html>

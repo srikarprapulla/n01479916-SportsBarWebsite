@@ -1,0 +1,116 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin-bottom: 20px;
+  font-family: Verdana, Arial, sans-serif;
+}
+.wrapper {
+  margin: 20px 30px;
+}
+header {
+  font-family: Georgia, serif;
+  display: flex;
+  align-items: center;
+  border: 1px solid red;
+}
+header h1,
+header h3 {
+  margin: 0;
+}
+header h1 {
+  color: green;
+  margin: 10px 0;
+}
+header h3 {
+  color: #f05c26;
+}
+footer {
+  text-align: center;
+  font-size: 0.7em;
+  padding: 10px;
+  background-color: #0033a0;
+  color: #fff;
+}
+#nav_menu ul {
+  list-style: none;
+  position: relative;
+}
+#nav_menu ul li {
+  float: left;
+  width: 50%;
+}
+#nav_menu ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+#nav_menu ul ul li {
+  float: none;
+}
+#nav_menu ul li:hover > ul {
+  display: block;
+}
+#nav_menu > ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#nav_menu ul {
+  margin: 0;
+  padding: 0;
+}
+#nav_menu ul li a {
+  opacity: 1;
+  text-align: center;
+  display: block;
+  padding: 1em 0;
+  text-decoration: none;
+  background-color: #f05c26;
+  color: white;
+  font-weight: bold;
+}
+#nav_menu ul li.lastitem a {
+  width: 178px;
+}
+#nav_menu ul li a.current {
+  color: yellow;
+}
+#nav_menu ul li a:hover,
+#nav_menu ul li a:focus {
+  background-color: #eaedf2;
+  color: #0033a0;
+}
+.football-nav {
+  background-color: green;
+  display: flex;
+  padding: 10px 0;
+  justify-content: end;
+}
+.football-nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+.football-nav a {
+  color: white;
+  padding: 0 20px;
+  text-decoration: none;
+}
+.football-nav a:hover {
+  color: orangered;
+}
+main {
+    border: 1px solid #778899;
+    padding: 15px;
+    background-color: #ffffff;
+  }
+  main .main-div {
+    display: flex;
+  }
+  main .main-div .subHeaders {
+    color: mediumvioletred;
+    font-weight: 700;
+  }

@@ -1,0 +1,165 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin-bottom: 20px;
+  font-family: Verdana, Arial, sans-serif;
+}
+#wrapper {
+  /* width: 100%; */
+  margin: 20px 30px;
+  /* min-width: 700px;
+  max-width: 1480px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 3px solid #4682b4; 
+  box-shadow: 0px 8px 5px 5px #666666; */
+}
+header {
+  font-family: Georgia, serif;
+  display: flex;
+  align-items: center;
+  border: 1px solid red;
+}
+header h1,
+header h3 {
+  margin: 0;
+}
+header h1 {
+  color: green;
+  margin: 10px 0;
+}
+header h3 {
+  color: #f05c26;
+}
+footer {
+  text-align: center;
+  font-size: 0.7em;
+  padding: 10px;
+  background-color: #0033a0;
+  color: #fff;
+}
+#nav_menu ul {
+  list-style: none;
+  position: relative;
+}
+#nav_menu ul li {
+  float: left;
+  width: 50%;
+}
+#nav_menu ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+#nav_menu ul ul li {
+  float: none;
+}
+#nav_menu ul li:hover > ul {
+  display: block;
+}
+#nav_menu > ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#nav_menu ul {
+  margin: 0;
+  padding: 0;
+}
+#nav_menu ul li a {
+  opacity: 1;
+  text-align: center;
+  display: block;
+  padding: 1em 0;
+  text-decoration: none;
+  background-color: #f05c26;
+  color: white;
+  font-weight: bold;
+}
+#nav_menu ul li.lastitem a {
+  width: 178px;
+}
+#nav_menu ul li a.current {
+  color: yellow;
+}
+#nav_menu ul li a:hover,
+#nav_menu ul li a:focus {
+  background-color: #eaedf2;
+  color: #0033a0;
+}
+.main-div {
+  display: flex;
+  background-color: #000000;
+}
+.main-div .text-section {
+  width: 35%;
+  color: #fff;
+  padding: 50px 0 50px 12.5%;
+}
+.main-div .text-section ul {
+  list-style-type: disclosure-open;
+}
+.main-div .text-section ul a {
+  color: #fff;
+  padding: 5px;
+}
+.main-div .text-section ul li a {
+  text-decoration: none;
+}
+.main-div .text-section ul ul {
+  list-style-type: disc;
+}
+.main-div .text-section ul ul li a {
+  text-decoration: underline;
+}
+.main-div .image-section .home-image {
+  margin: 20px;
+}
+.modal {
+  display: none;
+  position: fixed;
+  padding-top: 80px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+  position: relative;
+  background-color: white;
+  color: #0033a0;
+  padding: 50px;
+  margin: auto;
+  width: 40%;
+}
+#modal-btn{
+  cursor: pointer;
+  padding: 10px 30px;
+}
+.close-btn {
+  float: right;
+  color: #0033a0;
+  font-size: 24px;
+  font-weight: bold;
+}
+.close-btn:hover {
+  cursor: pointer;
+}
+.selectSportButton, .selectSlotsButton{
+  margin: 15px 0;
+}
+.submitModalButtonDiv{
+  text-align: center;
+}
+.submitModalButton{
+  background-color: green;
+  color: white;
+  padding: 10px;
+  border: 3px solid;
+  cursor: pointer;
+}

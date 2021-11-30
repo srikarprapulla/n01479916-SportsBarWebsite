@@ -114,7 +114,7 @@ h3 {
   width: 175px;
   padding: 1em 0; /* padding above and below li elements */
   text-decoration: none;
-  background-color: rgb(81, 194, 188);
+  /*background-color: rgb(81, 194, 188);*/
   color: black;
   font-weight: bold;
   border-right: 2px solid white;
@@ -135,6 +135,14 @@ aside ul li a.lastitem {
 #book-btn{
   margin-left: 30px;
   margin-bottom: 10px;
+}
+
+.changecolor{
+  background-color: "red";
+}
+
+.defaultcolor{
+  background-color: "grey";
 }
 
 /*

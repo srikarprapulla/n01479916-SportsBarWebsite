@@ -6,14 +6,24 @@ function myFunction() {
 function mouseoverevent()
 	{
         
-        console.log("mouse funct");
-        console.log("after effect",x,y);
-        document.getElementsByClassName("col1")[0].style.backgroundColor="blue";
-        document.getElementsByClassName("col2")[0].style.backgroundColor="red";
-        document.getElementsByClassName("col3")[0].style.backgroundColor="brown";
-        document.getElementsByClassName("col4")[0].style.backgroundColor="grey";
+        console.log( document.getElementById("col1"));
+        
+        //document.getElementById("col1").style.backgroundColor = "red " ;
+        //document.querySelector('#col1').style.backgroundColor = "red " ;
+        var element = document.getElementById("col1");
+        element.classList.toggle("changecolor");
+        // document.getElementsByClassName("col2")[0].style.backgroundColor="red";
+        // document.getElementsByClassName("col3")[0].style.backgroundColor="brown";
+        // document.getElementsByClassName("col4")[0].style.backgroundColor="grey";
+        // togole method to add a color and change a color
         
 	}
+    function mouseOut(){
+        document.getElementById("col1").innerHTML= "color";
+        console.log("inside mouse out")
+        var element = document.getElementById("col1");
+        element.classList.toggle("changecolor");
+    }
 
 //document.getElementById("nav_menu").addEventListener("mouseover", function() {
 //    document.getElementById("nav_menu").style.backgroundColor = "red";

@@ -131,6 +131,12 @@ aside ul li a.lastitem {
 .image{
   padding: 20px;
 }
+
+#book-btn{
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
 /*
 aside {
     width: 260px;

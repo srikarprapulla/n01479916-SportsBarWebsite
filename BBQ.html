@@ -41,60 +41,138 @@
             </ul>
           </nav>
 
+          <nav class="BBQ-nav">
+            <a href="index.html">Home</a>
+            <a href="#Ribs">Ribs</a>
+            <a href="#ChickenWings">Chicken Wings</a>
+            <a href="#Beef">Beef</a>
+            <a href="#Seafood">Seafood</a>
+            <a href="#Shrimps">Shrimps</a>
+            <a href="#Vegetables">Vegetables</a>           
+          </nav>
+
 
         <main>
             <h4>Our BBQ Menu</h4>
             <div>
-                <div>
+                <div id="Ribs">
                     <img src="assets/BBQ/Ribs.jpg" alt="Ribs" style="width:400px; float:right"/>
                     <br><br><br><u>Ribs</u>
                     <i>@19.99/each</i>
+
+                    <button onclick="orderRibs()">Order</button>
+ 
                     <p>Freshly prepared and smoked in-house daily, Montana's is your home for authentic BBQ ribs. Coated in Montana's signature rib rub, slow smoked over hickory chips and then fire grilled to order. Hungry yet? Served with feshly baked cornbread, seasoned fries and your choice of in-house baked beans or coleslaw. 1790-2380 Cals</p>
                     <br><br><br><br><br><br><br>
                 </div>
 
-                <div>
+                <div id="ChickenWings">
                     <img src="assets/BBQ/ChickenWings.webp" alt="ChickenWings" style="width:400px; float:left"/>
                     <br><br><br><u>Chicken Wings</u>
                     <i>@$9.99/each</i>
+                    <button onclick="orderChickenWings()">Order</button>
+
                     <p>The Wings Salt & Pepper come satisfyingly crispy, and deliciously hot and fresh just the way you like—available every day. Get them triple coated in a fan favourite mouth-watering salt and pepper flavour and expect nothing but the best quality day or night. They’re the perfect addition for game nights, movie nights, picnics and more.</p>
                     <br><br><br><br><br><br><br>
                 </div>
                 
-                <div>
+                <div id="Beef">
                     <img src="assets/BBQ/Beef.jpg" alt="Beef" style="width:400px; float:right"/>
                     <br><br><br><u>Beef</u>
                     <i>@$19.99/each</i>
+                    <button onclick="orderBeef()">Order</button>
+
                     <p>Our 7oz AAA Canadian Sirloin, aged for 50 days and fire-grilled to order topped with a garlic herb butter and served with creamy potato smashers, two crispy onion rings and your choice of in-house baked beans or coleslaw. Finish off your meal with four mini donuts tossed in cinnamon sugar and served with English toffee dipping sauce. 1920-1990 Cals/serving</p>
                     <br><br><br><br><br><br><br><br><br><br><br><br><br>
                 </div>
 
-                <div>
+                <div id="Seafood">
                     <img src="assets/BBQ/Seafood.jpg" alt="Seafood" style="width:400px; float:left"/>
                     <br><br><br><u>Seafood</u>
                     <i>@$29.99/each</i>
+                    <button onclick="orderSeafood()">Order</button>
+
                     <p>A Maritime lobster tail, jumbo shrimp skewer and salmon, fire-grilled and finished with a garlic and herb sauce. Served with choice of side.
                     </p>
                     <br><br><br><br>
                 </div>
 
-                <div>
+                <div id="Shrimps">
                     <img src="assets/BBQ/Shrimps.jpeg" alt="Shrimps" style="width:350px; float:right"/>
                     <br><br><br><u>Shrimps</u>
                     <i>@$9.99/each</i>
+                    <button onclick="orderShrimps()">Order</button>
+
                     <p>Breaded jalapeño popcorn shrimp, deep-fried and then tossed in our signature KAPOW! sauce - a combo of creamy garlic, tangy thai chili, fresh cilantro and lime juice. 330 Cals/serving, serves 2</p>
                     <br><br><br><br><br><br><br><br><br><br><br><br>
                 </div>
 
-                <div>
+                <div id="Vegetables">
                     <img src="assets/BBQ/Vegetables.png" alt="Vegetables" style="width:350px; float:left"/>
                     <br><br><br><u>Vegetables</u>
-                    <p>These grilled vegetables are an assortment of colorful veggies bathed in a flavorful garlic and herb marinade, then cooked to perfection on the grill. An easy dish that’s quick to make and always gets rave reviews! </p>
                     <i>@$1.99/each</i>
+                    <button onclick="orderVegetables()">Order</button>
+
+                    <p>These grilled vegetables are an assortment of colorful veggies bathed in a flavorful garlic and herb marinade, then cooked to perfection on the grill. An easy dish that’s quick to make and always gets rave reviews! </p>
+
                     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 </div>
             </div>
         </main>
     </div>
 </body>
+
+<script>
+    let BBQs = [
+    ['Ribs',0, 19.99,""],
+    ['Chicken Wings', 0, 9.99,""],
+    ['Beef',0, 19.99,""],
+    ['Seafood',0, 29.99,""],
+    ['Shrimps',0, 9.99,""],
+    ['Vegetables',0, 1.99,""]];
+
+    function orderRibs()
+    {
+        BBQs[0][1] = Number(prompt("How many do you want? "));
+        BBQs[0][3] = prompt("How would you like your Ribs served?");
+        alert("You have ordered "+BBQs[0][1]+" "+BBQs[0][0]+" served in "+BBQs[0][3]);
+    }
+
+    function orderChickenWings()
+    {
+        BBQs[1][1] = Number(prompt("How many do you want? "));
+        BBQs[1][3] = prompt("How would you like your Chicken Wings served?");
+        alert("You have ordered "+BBQs[1][1]+" "+BBQs[1][0]+" served in "+BBQs[1][3]);
+    }
+
+    function orderBeef()
+    {
+        BBQs[2][1] = Number(prompt("How many do you want? "));
+        BBQs[2][3] = prompt("How would you like your Beef served?");
+        alert("You have ordered "+BBQs[2][1]+" "+BBQs[2][0]+" served in "+BBQs[2][3]);
+    }
+
+    function orderSeafood()
+    {
+        BBQs[3][1] = Number(prompt("How many do you want? "));
+        BBQs[3][3] = prompt("How would you like your Seafood served?");
+        alert("You have ordered "+BBQs[3][1]+" "+BBQs[3][0]+" served in "+BBQs[3][3]);
+    }
+
+    function orderShrimps()
+    {
+        BBQs[4][1] = Number(prompt("How many do you want? "));
+        BBQs[4][3] = prompt("How would you like your Shrimps served?");
+        alert("You have ordered "+BBQs[4][1]+" "+BBQs[4][0]+" served in "+BBQs[4][3]);
+    }
+
+    function orderVegetables()
+    {
+        BBQs[5][1] = Number(prompt("How many do you want? "));
+        BBQs[5][3] = prompt("How would you like your Vegetables served?");
+        alert("You have ordered "+BBQs[5][1]+" "+BBQs[5][0]+" served in "+BBQs[5][3]);
+    }
+</script>
 </html>
+
+

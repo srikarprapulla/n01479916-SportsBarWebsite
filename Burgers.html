@@ -41,75 +41,185 @@
                 </ul>
             </nav>
 
-
+            <nav class="Burger-nav">
+                <a href="index.html">Home</a>
+                <a href="#CheeseBurger">CheeseBurger</a>
+                <a href="#BaconCheeseBurger">Bacon & Cheese Burger</a>
+                <a href="#DoubleBurger">Double Burger</a>
+                <a href="#ChickenBurger">Chicken Burger</a>
+                <a href="#FishBurger">Fish Burger</a>
+                <a href="#PlantBasedBurger">Plant Based Burger</a>           
+              </nav>
 
             <h3>Our Burger Menu</h3>
-            <table>
+            <table action="/action-page.php">
                 <thead>
                     <tr>
                         <th>Items</th>
                         <th><p>Description</p></th>
                         <th>Price</th>
+                        <th>Quantity</th>
                     </tr>
                 </thead>
 
                 <tbody>
-                    <tr>
+                    <tr id="CheeseBurger">
                         <td><img src="assets/Burgers/CheeseBurger.png" alt="Cheese Burger" style="width:350px"/></td>
                         <td>
                             <u>Cheese Burger</u><br>                    
                             <i>Regular Bun, Beef Patty, Pasteurized Process American Cheese, Ketchup, Pickle Slices, Onions, Mustard</i>
                         </td>
                         <td><i>$5.99/each</i></td>
+                        <td>
+                            <input type="number" id='addCheeseBurgers' /><br />
+                            <input type="button" value="Add" onclick="addCheeseBurger();updateTotal()"/>
+                        </td>
                     </tr>
 
-                    <tr>
+                    <tr id="BaconCheeseBurger">
                         <td><img src="assets/Burgers/Bacon&CheeseBurger.png" alt="Bacon&CheeseBurger" style="width:350px"/></td>
                         <td>
                             <u>Bacon & Cheese Burger</u><br> 
                             <i>Premium Bun, Beef Patty, Pasteurized Process American Cheese, Applewood Smoked Bacon, Ketchup, Pickle Slices, Onions, Mustard</i>
                         </td>
                         <td><i>$6.99/each</i></td>
+                        <td>
+                            <input type="number" id='addBaconCheeseBurgers' /><br />
+                            <input type="button" value="Add" onclick="addBaconCheeseBurger();updateTotal()"/>
+                        </td>
                     </tr>
 
-                    <tr>
+                    <tr id="DoubleBurger">  
                         <td><img src="assets/Burgers/DoubleBurger.png" alt="DoubleBurger" style="width:350px"/></td>
                         <td>
                             <u>Double Burger</u><br> 
                             <i>Premium Bun, Double Beef Patty, Pasteurized Process American Cheese, Mayonnaise, Ketchup, Pickle Slices, Onions, Mustard</i>
                         </td>
                         <td><i>$7.99/each</i></td>
+                        <td>
+                            <input type="number" id='addDoubleBurgers' /><br />
+                            <input type="button" value="Add" onclick="addDoubleBurger();updateTotal()"/>
+                        </td>
                     </tr>
 
-                    <tr>
+                    <tr id="ChickenBurger">
                         <td><img src="assets/Burgers/ChickenBurger.png" alt="ChickenBurger" style="width:350px"/></td>
                         <td>
                             <u>Chicken Burger</u><br> 
                             <i>Premium Bun, Spicy Chicken Breast, Jalapeno Cream Cheese, Shredded Pepper Jack Cheese, Applewood Smoked Bacon, Ketchup, Pickle Slices, Onions, Mustard              
                         </td>
                         <td><i>$6.99/each</i></td>
+                        <td>
+                            <input type="number" id='addChickenBurgers' /><br />
+                            <input type="button" value="Add" onclick="addChickenBurger();updateTotal()"/>
+                        </td>
                     </tr>
 
-                    <tr>
+                    <tr id="FishBurger">
                         <td><img src="assets/Burgers/FishBurger.jpg" alt="FishBurger" style="width:350px" /></td>
                         <td>
                             <u>Fish Burger</u><br> 
                             <i>Premium Bun, Fish Filet Patty, Pasteurized Process American Cheese, Applewood Smoked Bacon, Tartar Sauce, Pickle Slices, Onions</i>
                         </td>
                         <td><i>$6.99/each</i></td>
+                        <td>
+                            <input type="number" id='addFishBurgers' /><br />
+                            <input type="button" value="Add" onclick="addFishBurger();updateTotal()"/>
+                        </td>
                     </tr>
 
-                    <tr>
+                    <tr id="PlantBasedBurger">
                         <td><img src="assets/Burgers/PlantBasedBurger.png" alt="PlantBasedBurger" style="width:350px"/></td>
                         <td>
                             <u>Plant-Based Burger</u><br> 
                             <i>Premium Bun, Plant-Based Light Life Beef Pattery, Pasteurized Process American Cheese, Applewood Smoked Bacon, Tartar Sauce, Pickle Slices, Onions</i>
                         </td>
                         <td><i>$6.99/each</i></td>
+                        <td>
+                            <input type="number" id='addPlantBasedBurgers' /><br />
+                            <input type="button" value="Add" onclick="addPlantBasedBurger();updateTotal()"/>
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
+        <div id="display"></div>
+        <h5>
+            <input type="submit" class="submitbutton" value="Submit">
+            <input type="button" class="resetbutton" value="Reset" onclick="Reset();updateTotal()">
+        </h5>
+
+
+    
+        <script>
+            var Burgers =[
+            ['Cheese Burger',0], 
+            ['Bacon Cheese Burger', 0],
+            ['Double Burger', 0],
+            ['Chicken Burger', 0],
+            ['Fish Burger', 0],
+            ['Plant Based Burger',0]];
+
+            function addCheeseBurger()
+            {
+                var addCheeseBurgers = Number(document.getElementById('addCheeseBurgers').value);
+                Burgers[0][1]+=addCheeseBurgers;
+            }
+
+            function addBaconCheeseBurger()
+            {
+                var addBaconCheeseBurgers = Number(document.getElementById('addBaconCheeseBurgers').value);
+                Burgers[1][1]+=addBaconCheeseBurgers;
+            }
+
+            function addDoubleCheeseBurger()
+            {
+                var addDoubleBurgers = Number(document.getElementById('addDoubleBurgers').value);
+                Burgers[2][1]+=addDoubleBurgers;
+            }
+
+            function addChickenBurger()
+            {
+                var addChickenBurgers = Number(document.getElementById('addChickenBurgers').value);
+                Burgers[3][1]+=addChickenBurgers;
+            }
+
+            function addFishBurger()
+            {
+                var addFishBurgers = Number(document.getElementById('addFishBurgers').value);
+                Burgers[4][1]+=addFishBurgers;
+            }
+
+            function addPlantBasedBurger()
+            {
+                var addPlantBasedBurgers = Number(document.getElementById('addPlantBasedBurgers').value);
+                Burgers[5][1]+=addPlantBasedBurgers;
+            }
+
+            function updateTotal()
+            {
+                let DisplayBurgers = "<ul> <h4>You have Selected: </h4>"
+                    for(let i =0; i < Burgers.length; i++)
+                    {
+                        if (Burgers[i][1]!=0)
+                        {
+                            DisplayBurgers += "<li>" + Burgers[i][1] +" X " + Burgers[i][0]+"</li>";
+                        }
+                    }
+
+                document.getElementById('display').innerHTML = DisplayBurgers;
+            }
+
+            function Reset()
+            {
+                for(let i=0; i<Burgers.length;i++)
+                {
+                    Burgers[i][1]=0;
+                }
+            }
+
+        </script>
+
     </body>
 </html>
 

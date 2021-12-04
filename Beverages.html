@@ -39,43 +39,75 @@
                 </ul>
               </li>
             </ul>
-          </nav>        
+        </nav>
+        
+        <nav class="Beverage-nav">
+            <a href="index.html">Home</a>
+            <a href="#Coca-Cola">Coca-Cola</a>
+            <a href="#Sprite">Sprite</a>
+            <a href="#OrangeJuice">Orange Juice</a>
+            <a href="#Coffee">Coffee</a>
+            <a href="#Iced-Coffee">Iced-Coffee</a>
+            <a href="#ColdBrewCoffee">Cold Brew Coffee</a>           
+          </nav>
 
         <main>
             <h4>Our Beverages Menu</h4>
+            <h5 >
+                <select id="BeverageOption">
+                    <option>Coca-Cola</option>
+                    <option>Sprite</option>
+                    <option>Orange Juice</option>
+                    <option>Coffee</option>
+                    <option>Iced-Coffee</option>
+                    <option>Cold Brew Coffee</option>
+                </select>
+
+                <select id="BeverageSize">
+                    <option>Large</option>
+                    <option>Medium</option>
+                    <option>Small</option> 
+                </select>
+
+                <input type="number" id='BeverageQuantity'>
+                <input type="button" class="addToOrder" value="Add" onclick="addBeverage();updateTotal()">
+                
+
+            </h5>
+            <div id="display"></div>
 
             <div class="flex-container">
-                <div>
+                <div id="Coca-Cola">
                     <img src="assets/Drinks/Coca-cola.jpg" alt="Coca-Cola" style="width:350px"/>
                     <u>Coca-Cola</u>
                     <i>@$0.99/each</i><br><br>
                 </div>
 
-                <div>
+                <div id="Sprite">
                     <img src="assets/Drinks/Sprite.jpg" alt="Sprite" style="width:350px"/>
                     <u>Sprite</u>
                     <i>@$0.99/each</i><br><br>
                 </div>
                 
-                <div>
+                <div id="OrangeJuice">
                     <img src="assets/Drinks/Orange-juice.jpg" alt="Orange-Juice" style="width:350px"/>
                     <u>Orange Juice</u>
                     <i>@$0.99/each</i><br><br>
                 </div>
 
-                <div>
+                <div id="Coffee">
                     <img src="assets/Drinks/Hot-coffee.jpg" alt="Hot-coffee" style="width:350px"/>
                     <u>Coffee</u>
                     <i>@$1.49/each</i><br><br>
                 </div>
 
-                <div>
+                <div id="Iced-Coffee">
                     <img src="assets/Drinks/Iced-coffee.png" alt="Iced-coffee" style="width:350px"/>
                     <u>Iced-Coffee</u>
                     <i>@$1.99/each</i><br><br>
                 </div>
 
-                <div>
+                <div id="ColdBrewCoffee">
                     <img src="assets/Drinks/Cold-Brew-Coffee.png" alt="Cold-Brew-Coffee" style="width:350px"/>
                     <u>Cold Brew Coffee</u>
                     <i>@$1.99/each</i><br><br>
@@ -84,4 +116,55 @@
         </main>
     </div>
 </body>
+
+<script>
+    let Beverages = [
+    ['Coca-Cola', ['Large', 'Medium', 'Small'], [0,0,0]],
+    ['Sprite', ['Large', 'Medium', 'Small'], [0,0,0]],
+    ['Orange Juice', ['Large', 'Medium', 'Small'], [0,0,0]],
+    ['Coffee', ['Large', 'Medium', 'Small'], [0,0,0]],
+    ['Iced-Coffee', ['Large', 'Medium', 'Small'], [0,0,0]],
+    ['Cold Brew Coffee', ['Large', 'Medium', 'Small'], [0,0,0]]];
+
+    let BeverageSelect = [];
+
+    function addBeverage()
+    {
+        BeverageSelect[0] = document.getElementById('BeverageOption').value;
+        BeverageSelect[1] = document.getElementById('BeverageSize').value;
+        BeverageSelect[2] = Number(document.getElementById('BeverageQuantity').value);
+
+        for (let i=0; i<Beverages.length;i++)
+        {
+            if (BeverageSelect[0]==Beverages[i][0])
+            {
+                for (let j=0; j<Beverages[i][1].length;j++)
+                {
+                    if (BeverageSelect[1]==Beverages[i][1][j])
+                    {
+                        Beverages[i][2][j]+=BeverageSelect[2];
+                    }
+                }
+            }
+        }
+    }
+
+    function updateTotal()
+    {
+        let DisplayBeverages = "<ul> <h4>You have Selected: </h4>"
+        for(let i =0; i < Beverages.length; i++)
+        {
+            for (let j=0; j<Beverages[i][1].length; j++)
+            {
+                if (Beverages[i][2][j]!=0)
+                {
+                    DisplayBeverages +=  Beverages[i][0] +" - " + Beverages[i][1][j]+" - "+Beverages[i][2][j]+ "  <input type=\"button\" class=\"delFromOrder\" value=\"Delete\" onclick=\"  Beverages["+i+"][2]["+j+"]=0;updateTotal()\"><br>";
+                }
+            }
+        }
+        DisplayBeverages += "</ul>"
+        document.getElementById('display').innerHTML = DisplayBeverages;
+    }
+
+</script>
 </html>

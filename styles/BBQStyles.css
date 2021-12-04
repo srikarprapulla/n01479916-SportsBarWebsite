@@ -56,6 +56,21 @@ header {
     color: #0033a0;
   }
 
+  .BBQ-nav {
+    background-color: green;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  .BBQ-nav a {
+    color: #fff;
+    padding: 0 4.5%;
+    text-decoration: none;
+  }
+  .BBQ-nav a:hover {
+    color: orangered;
+  }
+
   h1 {
     color: crimson;
   }
@@ -131,3 +146,4 @@ body
     width: 90%;
     margin: auto;
 }
+

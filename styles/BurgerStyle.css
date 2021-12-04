@@ -55,6 +55,21 @@ header {
     background-color: #eaedf2;
     color: #0033a0;
   }
+
+  .Burger-nav {
+    background-color: green;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  .Burger-nav a {
+    color: #fff;
+    padding: 0 4.5%;
+    text-decoration: none;
+  }
+  .Burger-nav a:hover {
+    color: orangered;
+  }
   
   h1 {
     color: crimson;
@@ -67,9 +82,6 @@ header {
     border-radius: 20px;
     height: 40px;
   }
-
-
-
 
 table 
 {
@@ -89,6 +101,13 @@ h3
     font-size: 2em;
     font-weight: bold;
     text-align: center;
+}
+
+h4
+{
+    font-size:2em;
+    font-weight: Bold;
+    text-align: left;
 }
 
 table
@@ -127,3 +146,13 @@ tbody tr:nth-child(even)
     background-color: palegoldenrod;
 }
 
+ul
+{
+  background-color: paleturquoise;
+  text-align: right;
+}
+
+h5
+{
+  text-align: right;
+}

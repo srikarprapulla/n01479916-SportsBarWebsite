@@ -95,7 +95,7 @@ footer {
   background-color: #000000;
 }
 .main-div .text-section {
-  width: 35%;
+  width: 40%;
   color: #fff;
   padding: 50px 0 50px 12.5%;
 }
@@ -115,8 +115,15 @@ footer {
 .main-div .text-section ul ul li a {
   text-decoration: underline;
 }
+.main-div .image-section {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
 .main-div .image-section .home-image {
   margin: 20px;
+  width: 85%;
+  height: 85%;
 }
 .modal {
   display: none;
@@ -137,7 +144,7 @@ footer {
   margin: auto;
   width: 40%;
 }
-#modal-btn{
+#modal-btn {
   cursor: pointer;
   padding: 10px 30px;
 }
@@ -150,13 +157,14 @@ footer {
 .close-btn:hover {
   cursor: pointer;
 }
-.selectSportButton, .selectSlotsButton{
+.selectSportButton,
+.selectSlotsButton {
   margin: 15px 0;
 }
-.submitModalButtonDiv{
+.submitModalButtonDiv {
   text-align: center;
 }
-.submitModalButton{
+.submitModalButton {
   background-color: green;
   color: white;
   padding: 10px;

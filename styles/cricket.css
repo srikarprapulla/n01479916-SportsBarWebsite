@@ -111,13 +111,16 @@ footer {
 #pitchdetails,
 #gameposition,
 #master {
+  display: flex;
+  align-items: center;
   padding: 15px;
 }
 .image {
-  display: inline-block;
+  width: 200px;
+  height: 170px;
 }
 .description {
-  display: inline-block;
   margin-left: 30px;
+  margin-right: 20px;
   width: 80%;
 }

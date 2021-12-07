@@ -94,6 +94,21 @@ aside ul li a {
   text-decoration: none;
 }
 
+aside ul li a:hover {
+  background-color:red;
+}
+
+#book-btn {
+  background-color: #c94343;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
 footer {
   background-color: #6f94dc;
   text-align: center;

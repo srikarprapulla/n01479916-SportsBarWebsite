@@ -25,6 +25,20 @@ function mouseoverevent()
         element.classList.toggle("changecolor");
     }
 
+    var indexValue = 0;
+    function slideShow(){
+      setTimeout(slideShow, 2000);      
+      const img = document.getElementsByClassName("slide-img");  
+      for(var x = 0; x < img.length; x++){         
+        img[x].style.display = "none";
+      }
+      indexValue++;
+      if(indexValue > img.length){indexValue = 1}
+      img[indexValue-1].style.display = "block";
+    }
+    slideShow();
+
+
 //document.getElementById("nav_menu").addEventListener("mouseover", function() {
 //    document.getElementById("nav_menu").style.backgroundColor = "red";
 //});
@@ -40,4 +54,3 @@ function mouseoverevent()
 
 //document.getElementsByTagName("li").onmouseout.fontcolor = "black";
 
-    

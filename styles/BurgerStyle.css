@@ -57,13 +57,13 @@ header {
   }
 
   .Burger-nav {
-    background-color: green;
+    background-color: yellow;
     padding: 10px 0;
     display: flex;
     justify-content: space-around;
   }
   .Burger-nav a {
-    color: #fff;
+    color: darkred;
     padding: 0 4.5%;
     text-decoration: none;
   }

@@ -11,3 +11,7 @@ Added the Home page for Sport Bar.
 
 Javascript Features:
 Added a modal popup in home page to booka a slot to play.
+Added JSON file for cricket page and populating cricket contents dynamically using JQuery.
+Added Football game as Javascript feature in football Page.
+Added JSON file for gokart page and populating gokart contents dynamically using JQuery.
+Added javascript for pizzas page.

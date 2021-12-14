@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $.getJSON("./../json/cricket.json", function (data) {
+  $.getJSON("../json/cricket.json", function (data) {
     $.each(data, function (index, eachObj) {
       if (index % 2 == 1) {
         $("#text").append(

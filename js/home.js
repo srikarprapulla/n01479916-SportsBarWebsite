@@ -2,6 +2,7 @@ let modalBtn = document.getElementById("modal-btn");
 let modal = document.querySelector(".modal");
 let closeBtn = document.querySelector(".close-btn");
 modalBtn.onclick = function () {
+  document.getElementById("slotsBooked").innerHTML = "";
   modal.style.display = "block";
   sportsDropDown();
   timeSlotsDropDown();
@@ -19,12 +20,9 @@ window.onclick = function (e) {
   }
 };
 function submitModal() {
-  modal.style.display = "none";
   sportsDropDown();
   timeSlotsDropDown();
-  alert(
-    "Your slot for " + selectedSport + " is booked for between " + selectedSlot
-  );
+  document.getElementById("slotsBooked").innerHTML = "Your slot for " + selectedSport + " is booked for between " + selectedSlot
 }
 let sports = [];
 let selectedSport = "";
@@ -57,7 +55,7 @@ function selectTimeSlot() {
 }
 
 function sportsDropDown() {
-  var select = document.getElementById("sportsDropDown");
+  let select = document.getElementById("sportsDropDown");
   select.innerHTML = "";
   sports.forEach((each) => {
     select.innerHTML += '<option value="' + each + '">' + each + "</option>";
@@ -65,7 +63,7 @@ function sportsDropDown() {
 }
 
 function timeSlotsDropDown() {
-  var select = document.getElementById("timeSlotsDropDown");
+  let select = document.getElementById("timeSlotsDropDown");
   select.innerHTML = "";
   timeSlots.forEach((each) => {
     select.innerHTML += '<option value="' + each + '">' + each + "</option>";

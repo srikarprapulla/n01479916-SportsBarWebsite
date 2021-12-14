@@ -148,6 +148,9 @@ footer {
   cursor: pointer;
   padding: 10px 30px;
 }
+#slotsBooked{
+  color: green;
+}
 .close-btn {
   float: right;
   color: #0033a0;

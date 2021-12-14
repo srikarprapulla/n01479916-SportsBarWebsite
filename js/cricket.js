@@ -11,13 +11,13 @@ $(document).ready(function () {
             "</p>" +
             "</section>"
         );
-        var image = new Image();
+        let image = new Image();
         image.src = eachObj.imageSource;
         image.className = "image";
         $("#" + eachObj.id).append(image);
       } else {
         $("#text").append('<section id="' + eachObj.id + '">' + "</section>");
-        var image = new Image();
+        let image = new Image();
         image.src = eachObj.imageSource;
         image.className = "image";
         $("#" + eachObj.id).append(image);

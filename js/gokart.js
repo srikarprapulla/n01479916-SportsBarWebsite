@@ -20,20 +20,23 @@ function myFunction() {
 }
 
 $(document).ready(function () {
-  $.getJSON("./../json/gokart.json", function (data) {
-    $.each(data, function (index, cart) {
-      $("#details").append(
-        '<div id="' +
-          cart.id +
-          '">' +
-          "<h1>" +
-          cart.title +
-          "</h1>" +
-          "<p>" +
-          cart.description +
-          "</p>" +
-          "</div>"
-      );
-    });
-  });
+  $.getJSON(
+    "https://srikarprapulla.github.io/n01479916-SportsBarWebsite/json/gokart.json",
+    function (data) {
+      $.each(data, function (index, cart) {
+        $("#details").append(
+          '<div id="' +
+            cart.id +
+            '">' +
+            "<h1>" +
+            cart.title +
+            "</h1>" +
+            "<p>" +
+            cart.description +
+            "</p>" +
+            "</div>"
+        );
+      });
+    }
+  );
 });

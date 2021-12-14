@@ -1,5 +1,5 @@
 const assets = "ball.png";
-const path = "../assets/Football Images/";
+const path = "./../assets/Football Images/";
 
 // See Docs under Frame for FIT, FILL, FULL, and TAG scaling modes
 const frame = new Frame(FIT, 1024, 768, light, dark, assets, path);
@@ -11,7 +11,7 @@ frame.on("ready", () => {
   const physics = new Physics();
   const ball = frame
     .asset("ball.png")
-    .sca(0.7)
+    .sca(0.5)
     .centerReg()
     .addPhysics({ shape: "circle", restitution: 0.7 });
 

@@ -122,11 +122,11 @@ main .main-div #gameposition {
   height: 320px;
 }
 main .main-div .images-div .fifa-image {
-  height: 40vh;
+  height: 37%;
   width: 30vw;
 }
 main .main-div .images-div .player-image {
-  height: 72vh;
+  height: 63%;
   width: 30vw;
 }
 #fun-btn {

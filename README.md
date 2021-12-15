@@ -1,4 +1,5 @@
 # project-task-lists-rana0909
+
 project-task-lists-rana0909 created by GitHub Classroom
 This is a simple project we are doing titles SportBar.
 We had added header, footer and 2-tier nav links.
@@ -15,3 +16,8 @@ Added JSON file for cricket page and populating cricket contents dynamically usi
 Added Football game as Javascript feature in football Page.
 Added JSON file for gokart page and populating gokart contents dynamically using JQuery.
 Added javascript for pizzas page.
+
+developers
+Rana - Home page, Cricket page and Football page along with football game
+Srikar - bowling page, Go Cart page and pizza page
+Wai Chung So - BBQ page, Burger page and beverages page
